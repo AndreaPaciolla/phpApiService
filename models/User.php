@@ -2,8 +2,8 @@
 
 class User extends ActiveRecord\Model {
 
-	static $connection = 'mysql';
+	#static $connection = 'mysql';
 
-	public static $attr_accessible = array('id', 'name');
+	public static $attr_accessible = array('id', 'name', 'password');
 
 }

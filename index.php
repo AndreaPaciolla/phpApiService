@@ -1,34 +1,45 @@
 <?php
 
-require "vendor/autoload.php";
+/**
+ *
+ * Include all the main vendor's files
+ * 
+ * Load
+ *  > PHPactiveRecord
+ *  > Slim Framework
+ */
+require_once "vendor/autoload.php";
 
 
-$app = new \Slim\Slim();
-$app->response->headers->set('Content-Type', 'application/json');
+/**
+ *
+ * Load the main logic files. 
+ * 
+ * Load
+ *  > Controllers with callable functions
+ *  
+ */
+foreach ( glob("controllers/*.php") as $filename ) 
+    require_once $filename;
 
-$cfg = ActiveRecord\Config::instance();
-$cfg->set_model_directory('models');
-$cfg->set_connections(
-  array(
-    'development' => 'mysql://root:root@localhost/test',
-    #'test' => 'mysql://username:password@localhost/test_database_name',
-    #'production' => 'mysql://username:password@localhost/production_database_name'
-  )
-);
-
-$cfg->set_default_connection('development');
-
-#var_dump( User::find_by_id(1) );
-
-$app->get('/users/:id', 'getUser');
+/**
+ *
+ * Load the main configuration files. 
+ * 
+ * Load
+ *  > activerecord config
+ *  > slim config
+ *  > slim routes
+ *  
+ */
+foreach ( glob("config/*.php") as $filename ) 
+    require_once $filename;
 
 
-
-
-function getUser($id) {
-    //Show book identified by $id
-    
-    echo json_encode(  User::all()  ); 
-}
-
+/**
+ *
+ * Bootstrap the application!
+ * 
+ */
 $app->run();
+
