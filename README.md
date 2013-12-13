@@ -13,7 +13,7 @@ PHP 5.4.9 (cli) (built: Aug 21 2013 01:12:03) Copyright (c) 1997-2013 The PHP Gr
 
 ### Installation and configuration
 
-Open the file activerecord.config.php in congig/ folder and edit the following lines.
+Open the file activerecord.config.php in config/ folder and edit the following lines.
 ```shell
 $cfg->set_connections(
   array(
