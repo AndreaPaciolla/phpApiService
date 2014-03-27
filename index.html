@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <title>PHP API Service by AndreaPaciolla</title>
+  </head>
+
+  <body>
+
+    <header>
+      <div class="container">
+        <h1>PHP API Service</h1>
+        <h2>Simple php service to create a restful API system</h2>
+
+        <section id="downloads">
+          <a href="https://github.com/AndreaPaciolla/phpApiService/zipball/master" class="btn">Download as .zip</a>
+          <a href="https://github.com/AndreaPaciolla/phpApiService/tarball/master" class="btn">Download as .tar.gz</a>
+          <a href="https://github.com/AndreaPaciolla/phpApiService" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div>
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <h1>
+<a name="php-api-service" class="anchor" href="#php-api-service"><span class="octicon octicon-link"></span></a>PHP API Service</h1>
+
+<p>A simple php application bundled with php activerecord and slim framework by using composer. </p>
+
+<h2>
+<a name="setup" class="anchor" href="#setup"><span class="octicon octicon-link"></span></a>Setup</h2>
+
+<h3>
+<a name="context" class="anchor" href="#context"><span class="octicon octicon-link"></span></a>Context</h3>
+
+<pre lang="shell"><code>⎋ php -v
+PHP 5.4.9 (cli) (built: Aug 21 2013 01:12:03) Copyright (c) 1997-2013 The PHP Group
+</code></pre>
+
+<h3>
+<a name="installation-and-configuration" class="anchor" href="#installation-and-configuration"><span class="octicon octicon-link"></span></a>Installation and configuration</h3>
+
+<p>Open the file activerecord.config.php in congig/ folder and edit the following lines.</p>
+
+<pre lang="shell"><code>$cfg-&gt;set_connections(
+  array(
+    'development' =&gt; 'mysql://root@localhost/test',
+    #'development' =&gt; 'mysql://root:root@localhost/test',
+    #'test' =&gt; 'mysql://username:password@localhost/test_database_name',
+    #'production' =&gt; 'mysql://username:password@localhost/production_database_name'
+  )
+);
+</code></pre>
+
+<p>You are ready to start by having a look to the examples.</p>
+
+<h2>
+<a name="sources" class="anchor" href="#sources"><span class="octicon octicon-link"></span></a>Sources</h2>
+
+<ul>
+<li><a href="http://www.phpactiverecord.org/">http://www.phpactiverecord.org/</a></li>
+<li><a href="http://www.slimframework.com/">http://www.slimframework.com/</a></li>
+</ul>
+      </section>
+    </div>
+
+    
+  </body>
+</html>
